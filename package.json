@@ -1,0 +1,19 @@
+{
+  "name": "cash-money-calendar",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "electron-dev": "concurrently \"npm run build\" \"wait-on build/index.html && electron .\"",
+    "package": "electron-packager . CashMoneyCalendar --platform=win32 --arch=x64 --overwrite --out=release --icon=public/favicon.ico"
+  },
+  "devDependencies": {
+    "electron": "^36.4.0",
+    "electron-packager": "^17.1.1",
+    "concurrently": "^8.2.2",
+    "wait-on": "^7.0.1"
+  },
+  ...
+}
+
