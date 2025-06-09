@@ -1,19 +1,48 @@
 {
   "name": "cash-money-calendar",
   "version": "1.0.0",
+  "private": true,
+  "homepage": "https://kanyeheisenberg.github.io/ccy/",
   "main": "main.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "electron-dev": "concurrently \"npm run build\" \"wait-on build/index.html && electron .\"",
     "package": "electron-packager . CashMoneyCalendar --platform=win32 --arch=x64 --overwrite --out=release --icon=public/favicon.ico"
   },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "electron": "^36.4.0",
     "electron-packager": "^17.1.1",
-    "concurrently": "^8.2.2",
+    "gh-pages": "^6.0.0",
     "wait-on": "^7.0.1"
   },
-  ...
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
-
